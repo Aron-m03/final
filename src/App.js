@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import Nutrition from './pages/Nutrion';
-
+import Start from './pages/Start';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Nutrition />
+        <Start />
       </header>
     </div>
   );

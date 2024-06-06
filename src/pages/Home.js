@@ -3,6 +3,7 @@ import { Gender } from './Gender';
 import Age from './Age';
 import ExerciseOptions from './ExerciseOptions';
 import exercises from './data';
+import Results from './Results';
 
 const Home = () => {
   const [selectedOptions, setSelectedOptions] = useState({
@@ -58,12 +59,7 @@ const Home = () => {
           <button onClick={handleSubmit}>Submit</button>
         </>
       ) : (
-        <div>
-          <h2>Summary of Selected Exercise</h2>
-          <p>Gender: {selectedOptions.gender}</p>
-          <p>Age Group: {selectedOptions.ageGroup}</p>
-          <p>Exercise: {selectedOptions.exercise}</p>
-        </div>
+        <Results selectedOptions={selectedOptions} />
       )}
     </div>
   );
