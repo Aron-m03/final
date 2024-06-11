@@ -1,22 +1,16 @@
+// src/Results.js
+
 import React from 'react';
-import exercises from './data';
+import Calendar from './Calendar';
 
 const Results = ({ selectedOptions }) => {
-  const { gender, ageGroup, exercise } = selectedOptions;
-  const exerciseDetails = exercises[gender][ageGroup].find(ex => ex.name === exercise);
-
-  if (!exerciseDetails) {
-    return <div>No exercise selected</div>;
-  }
-
   return (
     <div>
-      <h2>Summary of Selected Exercise</h2>
-      <p>Gender: {gender}</p>
-      <p>Age Group: {ageGroup}</p>
-      <p>Exercise: {exercise}</p>
-      <p>Target Muscles: {exerciseDetails.targetMuscles.join(', ')}</p>
-      <p>Reps: {exerciseDetails.reps}</p>
+      <h2>Results</h2>
+      <p>Gender: {selectedOptions.gender}</p>
+      <p>Age Group: {selectedOptions.ageGroup}</p>
+      <p>Exercise: {selectedOptions.exercise}</p>
+      <Calendar selectedDays={selectedOptions.days} />
     </div>
   );
 };

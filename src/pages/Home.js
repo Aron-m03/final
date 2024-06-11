@@ -1,15 +1,19 @@
+// src/Home.js
+
 import React, { useState } from 'react';
 import { Gender } from './Gender';
 import Age from './Age';
 import ExerciseOptions from './ExerciseOptions';
 import exercises from './data';
 import Results from './Results';
+import Days from './Days';
 
 const Home = () => {
   const [selectedOptions, setSelectedOptions] = useState({
     gender: 'male',
     ageGroup: 'children',
-    exercise: ''
+    exercise: '',
+    days: []
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -36,6 +40,13 @@ const Home = () => {
     }));
   };
 
+  const handleSelectDays = (days) => {
+    setSelectedOptions(prevState => ({
+      ...prevState,
+      days
+    }));
+  };
+
   const handleSubmit = () => {
     setSubmitted(true);
   };
@@ -56,6 +67,7 @@ const Home = () => {
             onSelectOption={handleSelectExercise}
             title={`Select an exercise for ${gender} ${ageGroup}`}
           />
+          <Days selectedDays={selectedOptions.days} onSelectDays={handleSelectDays} />
           <button onClick={handleSubmit}>Submit</button>
         </>
       ) : (
