@@ -18,6 +18,18 @@ const exercises = {
         description: "A bodyweight exercise that targets the core muscles.",
         targetMuscles: ["Core", "Shoulders", "Back"],
         reps: "30-60 seconds"
+      },
+      {
+        name: "Jumping Jacks",
+        description: "A bodyweight exercise that targets the whole body.",
+        targetMuscles: ["Legs", "Core", "Cardiovascular System"],
+        reps: "20-30"
+      },
+      {
+        name: "Bear Crawls",
+        description: "A bodyweight exercise that targets the shoulders, chest, and core.",
+        targetMuscles: ["Shoulders", "Chest", "Core"],
+        reps: "10-20 meters"
       }
     ],
     teenagers: [
@@ -38,6 +50,18 @@ const exercises = {
         description: "A bodyweight exercise that targets the back, biceps, and shoulders.",
         targetMuscles: ["Back", "Biceps", "Shoulders"],
         reps: "5-10"
+      },
+      {
+        name: "Dumbbell Shoulder Press",
+        description: "A weightlifting exercise that targets the shoulders and triceps.",
+        targetMuscles: ["Shoulders", "Triceps"],
+        reps: "10-12"
+      },
+      {
+        name: "Incline Bench Press",
+        description: "A weightlifting exercise that targets the upper chest and shoulders.",
+        targetMuscles: ["Upper Chest", "Shoulders"],
+        reps: "8-12"
       }
     ],
     adults: [
@@ -57,6 +81,18 @@ const exercises = {
         name: "Bicep Curls",
         description: "A weightlifting exercise that targets the biceps.",
         targetMuscles: ["Biceps"],
+        reps: "10-15"
+      },
+      {
+        name: "Tricep Extensions",
+        description: "A weightlifting exercise that targets the triceps.",
+        targetMuscles: ["Triceps"],
+        reps: "10-15"
+      },
+      {
+        name: "Lateral Raises",
+        description: "A weightlifting exercise that targets the shoulders.",
+        targetMuscles: ["Shoulders"],
         reps: "10-15"
       }
     ],
@@ -78,6 +114,18 @@ const exercises = {
         description: "A gentle squat exercise performed with a chair for support.",
         targetMuscles: ["Quadriceps", "Glutes"],
         reps: "10-15"
+      },
+      {
+        name: "Bicep Curls with Resistance Bands",
+        description: "An exercise using resistance bands to target the biceps.",
+        targetMuscles: ["Biceps"],
+        reps: "10-15"
+      },
+      {
+        name: "Ankle Circles",
+        description: "A gentle exercise that improves ankle mobility and strength.",
+        targetMuscles: ["Ankles"],
+        reps: "10-15 per direction"
       }
     ]
   },
@@ -100,6 +148,18 @@ const exercises = {
         description: "A bodyweight exercise that targets the core and legs.",
         targetMuscles: ["Core", "Legs"],
         reps: "20-30"
+      },
+      {
+        name: "Burpees",
+        description: "A full-body exercise that targets multiple muscle groups.",
+        targetMuscles: ["Whole Body"],
+        reps: "10-15"
+      },
+      {
+        name: "Bear Crawls",
+        description: "A bodyweight exercise that targets the shoulders, chest, and core.",
+        targetMuscles: ["Shoulders", "Chest", "Core"],
+        reps: "10-20 meters"
       }
     ],
     teenagers: [
@@ -119,6 +179,18 @@ const exercises = {
         name: "Bicep Curls",
         description: "A weightlifting exercise that targets the biceps.",
         targetMuscles: ["Biceps"],
+        reps: "10-15"
+      },
+      {
+        name: "Dumbbell Chest Press",
+        description: "A weightlifting exercise that targets the chest and triceps.",
+        targetMuscles: ["Chest", "Triceps"],
+        reps: "8-12"
+      },
+      {
+        name: "Dead Bug",
+        description: "A core exercise that improves stability and strength.",
+        targetMuscles: ["Core"],
         reps: "10-15"
       }
     ],
@@ -140,6 +212,18 @@ const exercises = {
         description: "A bodyweight exercise that targets the triceps.",
         targetMuscles: ["Triceps"],
         reps: "10-15"
+      },
+      {
+        name: "Goblet Squats",
+        description: "A weighted squat exercise that targets the quadriceps and glutes.",
+        targetMuscles: ["Quadriceps", "Glutes"],
+        reps: "10-15"
+      },
+      {
+        name: "Russian Twists",
+        description: "A core exercise that targets the obliques.",
+        targetMuscles: ["Obliques"],
+        reps: "15-20"
       }
     ],
     seniors: [
@@ -160,6 +244,18 @@ const exercises = {
         description: "A simple exercise that targets the shoulders and arms.",
         targetMuscles: ["Shoulders", "Arms"],
         reps: "15-20"
+      },
+      {
+        name: "Wall Push-Ups",
+        description: "A gentle push-up variation performed against a wall.",
+        targetMuscles: ["Chest", "Shoulders", "Triceps"],
+        reps: "10-15"
+      },
+      {
+        name: "Toe Taps",
+        description: "A low-impact exercise that targets the lower body.",
+        targetMuscles: ["Legs"],
+        reps: "10-15 per leg"
       }
     ]
   }

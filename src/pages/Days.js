@@ -1,41 +1,50 @@
 // src/Days.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Days = () => {
-  const [selectedDays, setSelectedDays] = useState([]);
+const Days = ({ selectedDays, onSelectDays }) => {
+  const [localSelectedDays, setLocalSelectedDays] = useState(selectedDays);
+
+  useEffect(() => {
+    setLocalSelectedDays(selectedDays);
+  }, [selectedDays]);
 
   const handleCheckboxChange = (event) => {
     const day = parseInt(event.target.value);
+    let updatedDays;
     if (event.target.checked) {
-      setSelectedDays([...selectedDays, day]);
+      updatedDays = [...localSelectedDays, day];
     } else {
-      setSelectedDays(selectedDays.filter(d => d !== day));
+      updatedDays = localSelectedDays.filter(d => d !== day);
     }
+    setLocalSelectedDays(updatedDays);
+    onSelectDays(updatedDays);
   };
+
+  const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   return (
     <div>
       <h2>Select Days</h2>
       <div>
-        {[1, 2, 3, 4, 5].map(day => (
-          <label key={day}>
+        {daysOfWeek.map((day, index) => (
+          <label key={index}>
             <input
               type="checkbox"
-              value={day}
+              value={index}
               onChange={handleCheckboxChange}
-              checked={selectedDays.includes(day)}
+              checked={localSelectedDays.includes(index)}
             />
-            Day {day}
+            {day}
           </label>
         ))}
       </div>
       <div>
         <h3>Selected Days</h3>
-        {selectedDays.length > 0 ? (
+        {localSelectedDays.length > 0 ? (
           <ul>
-            {selectedDays.map(day => (
-              <li key={day}>Day {day}</li>
+            {localSelectedDays.map(day => (
+              <li key={day}>{daysOfWeek[day]}</li>
             ))}
           </ul>
         ) : (

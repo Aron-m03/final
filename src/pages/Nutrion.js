@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./Nutrition.css"
 
 const Nutrition = () => {
   const [query, setQuery] = useState('');

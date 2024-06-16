@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link to="/nutrition">Nutrition</Link>
         </li>
         <li>
-          <Link to="/age">Age</Link>
+          <Link to="/contact-form">Contact</Link>
         </li>
       </ul>
     </nav>

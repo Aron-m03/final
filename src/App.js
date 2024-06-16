@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Start from './pages/Start';
+import Start from './pages/Nav';
 function App() {
   return (
     <div className="App">
